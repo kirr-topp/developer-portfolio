@@ -67,3 +67,14 @@
 .android-import-note{justify-self:center;max-width:420px}
 @media(max-width:560px){.story-gallery .android-mockup{width:min(296px,75vw)}}
 .ios-device-link .hero-iphone-render{position:static;width:100%;height:auto;object-fit:contain;z-index:auto;pointer-events:auto}
+
+/* Larger, clearer device galleries and slower scroll reveals. */
+.story-gallery .iphone11-mockup,.story-gallery .android-mockup{width:min(100%,260px)}
+.story-gallery.three-up .iphone11-mockup,.story-gallery.three-up .android-mockup{width:min(100%,300px)}
+.story-row:has(.story-gallery.three-up){grid-template-columns:1fr;gap:38px}
+.story-row:has(.story-gallery.three-up) .story-copy,.story-row:has(.story-gallery.three-up) .story-gallery{order:0}
+.reveal{opacity:0;transform:translate3d(0,48px,0) scale(.985);filter:blur(4px);transition:opacity 1.25s cubic-bezier(.2,.65,.2,1),transform 1.25s cubic-bezier(.2,.65,.2,1),filter 1.25s ease}
+.reveal.is-visible{opacity:1;transform:translate3d(0,0,0) scale(1);filter:blur(0)}
+@media(max-width:850px){.story-gallery.three-up .iphone11-mockup,.story-gallery.three-up .android-mockup{width:min(100%,300px)}}
+@media(max-width:560px){.story-gallery.three-up .iphone11-mockup,.story-gallery.three-up .android-mockup{width:min(296px,75vw)}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;filter:none;transition:none}}

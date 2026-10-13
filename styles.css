@@ -12,3 +12,21 @@
 .status.ready:before{color:#55cf83}
 .status.development{color:#82aaff}
 .status.development:before{color:#82aaff}
+
+/* iPhone showcase and slower entrances across the portfolio. */
+.hero h1,.hero .intro{position:relative;z-index:2;max-width:min(58vw,700px)}
+.hero-phone-mockup{position:absolute;z-index:1;top:82px;right:11%;display:block;width:clamp(170px,22vw,260px);transform:perspective(1100px) rotateY(-5deg) rotateZ(2deg);transform-origin:center;filter:drop-shadow(0 32px 36px #000b);transition:transform .85s cubic-bezier(.2,.75,.25,1),filter .85s ease}
+.hero-phone-mockup img{display:block;width:100%;height:auto}
+@media(hover:hover){.hero-phone-mockup:hover{transform:perspective(1100px) rotateY(-12deg) rotateZ(1deg) translateY(-7px);filter:drop-shadow(0 40px 42px #000c)}}
+.hero.reveal.is-visible>.eyebrow{animation:hero-text-in .85s .08s both cubic-bezier(.2,.65,.2,1)}
+.hero.reveal.is-visible>h1{animation:hero-text-in 1s .18s both cubic-bezier(.2,.65,.2,1)}
+.hero.reveal.is-visible>.intro{animation:hero-text-in 1s .3s both cubic-bezier(.2,.65,.2,1)}
+.hero.reveal.is-visible>.text-link{animation:hero-text-in 1s .42s both cubic-bezier(.2,.65,.2,1)}
+@keyframes hero-text-in{from{opacity:0;transform:translateY(26px);filter:blur(5px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+.reveal{opacity:0;transform:translate3d(0,48px,0) scale(.985);filter:blur(4px);transition:opacity 1.25s cubic-bezier(.2,.65,.2,1),transform 1.25s cubic-bezier(.2,.65,.2,1),filter 1.25s ease}
+.reveal.is-visible{opacity:1;transform:translate3d(0,0,0) scale(1);filter:blur(0)}
+@media(max-width:800px){.hero h1,.hero .intro{max-width:min(68vw,600px)}.hero-phone-mockup{top:auto;right:24px;bottom:26px;width:clamp(115px,29vw,175px);opacity:.94}}
+@media(max-width:540px){.hero h1,.hero .intro{max-width:100%}.hero-phone-mockup{width:clamp(102px,28vw,140px);right:22px;bottom:20px}}
+@media(prefers-reduced-motion:reduce){.hero-phone-mockup{transition:none}.hero.reveal.is-visible>.eyebrow,.hero.reveal.is-visible>h1,.hero.reveal.is-visible>.intro,.hero.reveal.is-visible>.text-link{animation:none}.reveal{opacity:1;transform:none;filter:none;transition:none}}
+@media(max-width:800px){.hero h1,.hero .intro{max-width:min(62vw,600px)}}
+@media(max-width:540px){.hero{min-height:780px;padding-bottom:200px}}

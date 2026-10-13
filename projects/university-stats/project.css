@@ -44,3 +44,25 @@
 .story-gallery.three-up .iphone11-mockup{width:100%}
 @media(max-width:850px){.feature-visual .iphone11-mockup{width:min(276px,75vw)}.story-gallery .iphone11-mockup{width:min(100%,220px)}.story-gallery.three-up{gap:10px}}
 @media(max-width:560px){.story-gallery.three-up{grid-template-columns:1fr;gap:24px}.story-gallery.three-up .iphone11-mockup{width:min(296px,75vw)}}
+
+/* Hero: actual Samsung Galaxy Note 5 and iPhone 11 renders, each linked to its own walkthrough. */
+.hero-showcase{width:min(100%,430px)}
+.hero-artwork{aspect-ratio:500/650;overflow:visible;isolation:isolate;perspective:1100px}
+.hero-device-link{position:absolute;display:block;transform-style:preserve-3d;transform-origin:center;transition:transform .42s cubic-bezier(.2,.75,.25,1);outline-offset:4px}
+.hero-device-link:focus-visible{outline:2px solid var(--blue);border-radius:30px}
+.android-device-link{z-index:1;left:2%;top:13%;width:53%;filter:drop-shadow(0 30px 30px #0009)}
+.ios-device-link{z-index:2;left:34%;top:3%;width:62%;filter:drop-shadow(0 36px 35px #000b)}
+.hero-device-link img{display:block;width:100%;height:auto}
+.hero-device-captions{display:flex;justify-content:space-around;gap:8px;margin-top:10px;height:auto;color:#e5e6e9;font:700 12px/1.35 Manrope,sans-serif;letter-spacing:.1px}
+.hero-device-captions span{position:static;transform:none;white-space:nowrap;text-align:center}
+@media(hover:hover){.android-device-link:hover{transform:rotateY(-8deg) rotateZ(-1deg) translateY(-4px)}.ios-device-link:hover{transform:rotateY(8deg) rotateZ(1deg) translateY(-4px)}}
+.android-mockup{position:relative;isolation:isolate;width:276px;height:auto;max-width:100%;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible}
+.android-mockup>img{display:block;width:100%;height:auto;object-fit:contain}
+.story-device.android-mockup{width:276px;height:auto}
+.story-gallery .android-mockup{width:min(100%,220px)}
+.story-gallery.three-up .android-mockup{width:100%}
+@media(max-width:850px){.hero-showcase{width:min(100%,430px)}.story-gallery .android-mockup{width:min(100%,220px)}}
+@media(max-width:560px){.hero-showcase{width:min(100%,calc(100vw - 48px))}.hero-artwork{aspect-ratio:500/650}.hero-device-captions{font-size:9px;gap:4px}.android-device-link{left:2%;width:53%;top:14%}.ios-device-link{left:34%;width:62%;top:3%}.story-device.android-mockup{width:min(296px,75vw)}.story-gallery .android-mockup{width:min(100%,220px)}.story-gallery.three-up .android-mockup{width:min(296px,75vw)}}
+@media(prefers-reduced-motion:reduce){.hero-device-link{transition:none}}
+.android-import-note{justify-self:center;max-width:420px}
+@media(max-width:560px){.story-gallery .android-mockup{width:min(296px,75vw)}}

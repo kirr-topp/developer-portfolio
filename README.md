@@ -8,7 +8,7 @@ Responsive bilingual RU/EN portfolio built with plain HTML, CSS, and JavaScript.
 - GitHub profile: https://github.com/kirr-topp
 - Add a résumé link when available.
 - Add screenshots only after choosing shareable project images.
-- Keep project status accurate: University Stats is in progress; the tutor scheduling app is at planning/concept stage based on the files currently available.
+- Keep project status accurate: University Stats is ready; the tutor schedule web app is in development, with a working version at https://teacher-schedule.kirkir1039.workers.dev/.
 
 ## Suggested GitHub setup
 

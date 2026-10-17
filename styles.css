@@ -28,3 +28,10 @@
 .reveal.is-visible{opacity:1;transform:translate3d(0,0,0) scale(1);filter:blur(0)}
 @media(max-width:800px){.project-featured{grid-template-columns:1fr;gap:28px}.project-phone-mockup img{width:clamp(180px,34vw,245px)}}
 @media(prefers-reduced-motion:reduce){.project-phone-mockup img{transition:none}.hero.reveal.is-visible>.eyebrow,.hero.reveal.is-visible>h1,.hero.reveal.is-visible>.intro,.hero.reveal.is-visible>.text-link{animation:none}.reveal{opacity:1;transform:none;filter:none;transition:none}}
+
+/* Tutor schedule project preview: the original MacBook mockup with private demo data covered. */
+.tutor-card-art{position:relative;display:block;min-height:0!important;background:radial-gradient(ellipse at 50% 56%,#18202c 0,#0b0c0e 70%);padding:0 0 1px;transition:transform .45s cubic-bezier(.2,.75,.25,1),filter .45s ease}
+.tutor-card-art img{display:block;width:100%;height:auto;filter:drop-shadow(0 22px 36px #0009);transition:transform .55s cubic-bezier(.2,.75,.25,1)}
+.tutor-card-art:hover img{transform:translateY(-5px) scale(1.018)}
+.tutor-live-link{display:inline-flex;margin-top:14px}
+@media(max-width:800px){.tutor-card-art{order:0!important}}

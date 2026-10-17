@@ -1,6 +1,6 @@
 const languageButton=document.querySelector('#language');
 let language=localStorage.getItem('portfolio-language')||'ru';
-function renderLanguage(){document.documentElement.lang=language;document.querySelectorAll('[data-ru][data-en]').forEach(el=>{el.innerHTML=el.dataset[language]});languageButton.textContent=language==='ru'?'EN':'RU';languageButton.setAttribute('aria-label',language==='ru'?'Switch to English':'Переключить на русский');document.title=language==='ru'?'Расписание репетитора — Кирилл Кириченко':'Tutor Schedule — Kirill Kirichenko'}
+function renderLanguage(){document.documentElement.lang=language;document.querySelectorAll('[data-ru][data-en]').forEach(el=>{el.textContent=el.dataset[language]});languageButton.textContent=language==='ru'?'EN':'RU';languageButton.setAttribute('aria-label',language==='ru'?'Switch to English':'Переключить на русский');document.title=language==='ru'?'Расписание репетитора — Кирилл Кириченко':'Tutor Schedule — Kirill Kirichenko'}
 languageButton.addEventListener('click',()=>{language=language==='ru'?'en':'ru';localStorage.setItem('portfolio-language',language);renderLanguage()});
 document.querySelector('#year').textContent=new Date().getFullYear();renderLanguage();
 const revealItems=document.querySelectorAll('.reveal');
